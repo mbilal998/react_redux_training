@@ -13,13 +13,11 @@ const ProductDetail = () => {
     const { image, title, price, category, description } = product;
 
     useEffect(() => {
-        if (productId && productId !== '') {
-            fetchProductDetail(productId);
-        }
+        if (productId && productId !== "") fetchProductDetail(productId);
         return () => {
             dispatch(removeSelectedProduct());
-        }
-    }, [productId])
+        };
+    }, [productId]);
 
     const fetchProductDetail = async (id) => {
         const response = await axios
