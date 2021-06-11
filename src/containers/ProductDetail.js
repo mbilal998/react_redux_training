@@ -13,7 +13,7 @@ const ProductDetail = () => {
     const { image, title, price, category, description } = product;
 
     useEffect(() => {
-        if (productId && productId != '') {
+        if (productId && productId !== '') {
             fetchProductDetail(productId);
         }
         return () => {
